@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package Object;
-
+import java.util.ArrayList;
 /**
  *
  * @author juanlossio
@@ -11,13 +11,14 @@ package Object;
 public class CandidatTerm {
     private String term;
     private double importance;
-    private int isTrueTerm;
-    private String sourceDictionary;
+    private int isTrueTerm; 
+    private ArrayList<String> sourceDictionnary; // liste des sources du term
+    private ArrayList<String> URIs; // liste des URIs referencant le term
 
     public CandidatTerm(String term, double importance) {
         setTerm(term);
         setImportance(importance);
-        setSourceDictionary("");
+        
     }
 
     /**
@@ -70,18 +71,20 @@ public class CandidatTerm {
         this.isTrueTerm = isTrueTerm;
     }
 
-    /**
-     * @return the sourceDictionary
-     */
-    public String getSourceDictionary() {
-        return sourceDictionary;
-    }
+	public ArrayList<String> getSourceDictionnary() {
+		return sourceDictionnary;
+	}
 
-    /**
-     * @param sourceDictionary the sourceDictionary to set
-     */
-    public void setSourceDictionary(String sourceDictionary) {
-        this.sourceDictionary = sourceDictionary;
-    }
-    
-}
+	public void setSourceDictionnary(ArrayList<String> sourceDictionnary) {
+		this.sourceDictionnary = sourceDictionnary;
+	}
+
+	public ArrayList<String> getURIs() {
+		return URIs;
+	}
+
+	public void setURIs(ArrayList<String> uRIs) {
+		URIs = uRIs;
+	}
+
+  
